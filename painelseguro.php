@@ -164,15 +164,15 @@ mysqli_close($conexao);
                       $nova_data = date("d/m/Y", strtotime($novo_resultado['Data'])); ?>
 
                       <td><?php echo $nova_data; ?></td>
-                      <td><?php echo $novo_resultado['Meta Seguro']; ?></td>
-                      <td><?php echo $novo_resultado['Realizado Seguro']; ?></td>
+                      <td>R$ <?php echo $novo_resultado['Meta Seguro']; ?></td>
+                      <td>R$ <?php echo $novo_resultado['Realizado Seguro']; ?></td>
                       <?php
                         if($novo_resultado['Resultado $'] >= 0){ ?>
-                          <td style="color: green;"><?php echo $novo_resultado['Resultado $']; ?></td>
+                          <td style="color: green;">R$ <?php echo $novo_resultado['Resultado $']; ?></td>
                           <?php
                         }else{
                           ?>
-                          <td style="color: red;"><?php echo $novo_resultado['Resultado $']; ?></td>
+                          <td style="color: red;">R$ <?php echo $novo_resultado['Resultado $']; ?></td>
                           <?php                      }
                        ?>
                        <?php
